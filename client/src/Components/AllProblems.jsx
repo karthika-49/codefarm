@@ -47,7 +47,7 @@ const AllProblems = () => {
   return (
     <Box p={4}>
     {isLoading ? (
-      <Box height={"100vh"}>
+      <Box height={"75vh"}>
       <Spinner msg={"Loading problems..."}/>
       </Box>
     ):
