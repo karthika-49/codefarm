@@ -155,7 +155,7 @@ const ProblemsPage = () => {
           )}
         </Flex>
       </Flex>
-
+            
       <Flex width="50vw" flexDirection="column" m="15px">
         <Text fontFamily="sans-serif" fontSize="30px">
           Code Here
@@ -197,6 +197,9 @@ const ProblemsPage = () => {
         >
           Submit Code
         </Button>
+      <Text style={{ marginTop: '10px', fontSize: '12px', color: '#888', alignSelf: 'flex-start' }}>
+  &copy; 2024 Karthika Bingi. All rights reserved.
+</Text>
       </Flex>
     </Flex>
   );

@@ -8,6 +8,8 @@ import {
   Th,
   Td,
   TableCaption,
+  Text,
+  Flex,
 } from "@chakra-ui/react";
 import Spinner from "./Spinner.jsx";
 import { Link } from "react-router-dom";
@@ -50,8 +52,9 @@ const AllProblems = () => {
       </Box>
     ):
     (
-
-      <Table variant="striped" colorScheme="gray">
+      
+      <Flex flexDirection={"column"}>
+      <Table variant="striped" colorScheme="gray" >
         <Thead>
           <Tr>
             <Th style={{ fontSize: "15px" }}>Title</Th>
@@ -75,6 +78,10 @@ const AllProblems = () => {
           ))}
         </Tbody>
       </Table>
+      <Text style={{ marginTop: '10px', fontSize: '12px', color: '#888', alignSelf: 'center' }}>
+      &copy; 2024 Karthika Bingi. All rights reserved.
+    </Text>
+    </Flex>
     )
   }
     </Box>

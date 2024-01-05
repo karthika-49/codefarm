@@ -1,7 +1,7 @@
 import React from 'react';
 import ProgrammingFacts from './ProgrammingFacts';
 import ProgrammingAnimation from './PrgrammingAnimation';
-import { Flex } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 
 const HomePage = () => {
   const programmingFacts = [
@@ -64,10 +64,15 @@ const HomePage = () => {
     "The programming language 'Java' was named after the island of Java, Indonesia, not the coffee.",
     "In 1978, the first spam email was sent over ARPANET, the precursor to the modern internet."]
   return (
+    <Flex flexDirection={"column"}    >
     <Flex style={{ position: 'relative', overflow: 'hidden' }}>
     <ProgrammingFacts facts={programmingFacts} />
     <ProgrammingAnimation />
   </Flex>
+  <Text style={{ marginTop: '10px', fontSize: '12px', color: '#888', alignSelf: 'center' }}>
+        &copy; 2024 Karthika Bingi. All rights reserved.
+      </Text>
+    </Flex>
   );
 };
 
