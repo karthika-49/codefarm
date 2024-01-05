@@ -160,6 +160,8 @@ const ProblemsPage = () => {
         <Text fontFamily="sans-serif" fontSize="30px">
           Code Here
         </Text>
+        <Flex flexDirection={"column"} mt={"35px"}>
+
         {alert.type && (
           <Alert
             mb="2"
@@ -168,7 +170,6 @@ const ProblemsPage = () => {
             padding="10px"
             color="black"
             backgroundColor={alert.type === "success" ? "#c6f6d5" : "#fed7d7"}
-            marginTop="10px"
           >
             <AlertIcon />
             {alert.message}
@@ -200,6 +201,7 @@ const ProblemsPage = () => {
       <Text style={{ marginTop: '10px', fontSize: '12px', color: '#888', alignSelf: 'flex-start' }}>
   &copy; 2024 Karthika Bingi. All rights reserved.
 </Text>
+          </Flex>
       </Flex>
     </Flex>
   );
