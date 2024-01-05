@@ -10,8 +10,7 @@ import {
   AlertIcon,
 } from "@chakra-ui/react";
 import axios from "axios";
-import { backendUrl } from "../constants.js";
-
+import { backendUrl } from "../constants";
 const Login = ({ setLoggedIn }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

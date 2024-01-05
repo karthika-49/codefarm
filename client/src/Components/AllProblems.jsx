@@ -9,18 +9,22 @@ import {
   Td,
   TableCaption,
 } from "@chakra-ui/react";
+import Spinner from "./Spinner.jsx";
 import { Link } from "react-router-dom";
 import { backendUrl } from "../constants.js";
 
 const AllProblems = () => {
   // Fake problems array
   const [problems, setProblems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true)
   const init = async () => {
+    setIsLoading(true);
     const response = await fetch(`${backendUrl}/problems`, {
       method: "GET",
     });
     const json = await response.json();
     setProblems(json.problems);
+    setIsLoading(false);
   };
   useEffect(() => {
     init();
@@ -40,6 +44,13 @@ const AllProblems = () => {
 
   return (
     <Box p={4}>
+    {isLoading ? (
+      <Box height={"100vh"}>
+      <Spinner msg={"Loading problems..."}/>
+      </Box>
+    ):
+    (
+
       <Table variant="striped" colorScheme="gray">
         <Thead>
           <Tr>
@@ -64,6 +75,8 @@ const AllProblems = () => {
           ))}
         </Tbody>
       </Table>
+    )
+  }
     </Box>
   );
 };
